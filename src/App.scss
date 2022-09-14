@@ -44,8 +44,10 @@ header {
     }
   }
 
-  .header-right .account {
-    display: none;
+  .account {
+    display: flex;
+    align-items: center;
+    gap: 24px;
   }
 
   @media only screen and (max-width: 700px) {
@@ -53,7 +55,7 @@ header {
     .header-content {
 
       position: fixed;
-      padding: 84px 0 24px 0;
+      padding: 84px 24px 0 24px;
       background: #FFFFFF;
       box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -1px rgba(0, 0, 0, 0.06), 0px 0px 0px 1px rgba(0, 0, 0, 0.05);
       border-radius: 8px;
@@ -80,6 +82,7 @@ header {
           display: block;
           padding: 8px 12px;
           color: #374151;
+          margin-left: 0;
         }
       }
 
@@ -97,6 +100,13 @@ header {
       }
 
       .account {
+        display: flex;
+        padding: 12px;
+      }
+    }
+
+    .header-right {
+      .account {
         display: none;
       }
     }
@@ -112,22 +122,35 @@ header {
 
 main {
 
-  padding: 96px 0;
 
   background-image: url(./assets/icons/hero-bg.svg);
   background-repeat: no-repeat;
   background-position: top right;
 
+
+  padding-top: 100px;
+
   @media only screen and (max-width: 1050px) {
     background-position: center 600px;
+    background-size: 90%;
+    height: 1200px;
+    padding-top: 40px;
   }
-
-  height: fit-content;
 
   .section {
 
     margin: 0 32px;
     max-width: 592px;
+
+    &.pitch {
+      max-width: 520px;
+      @media only screen and (max-width: 1360px) {
+        max-width: 490px;
+      }
+      @media only screen and (max-width: 500px) {
+        max-width: 370px;
+      }
+    }
 
     h1 {
       letter-spacing: -0.025em;

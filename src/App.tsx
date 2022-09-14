@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import './App.scss'
 import logoIcon from "./assets/icons/Logo.svg?url"
-import menuIcon from "./assets/icons/Menu.svg?url"
 import closeIcon from "./assets/icons/Close.svg?url"
 
 
@@ -21,7 +20,7 @@ function App() {
           <img src={logoIcon} className="logo" alt="Company Name" />
           <div className={contentClass}>
             <img src={logoIcon} className="logo" alt="Company Name" />
-            <button className="icon-btn sqr-20 close" onClick={e => setContentClass('header-content')}/>
+            <img src={closeIcon} className="close" alt="Close" onClick={e => setContentClass('header-content')} />
             <nav>
               <a>Product</a>
               <a>Features</a>
@@ -36,12 +35,13 @@ function App() {
         <div className="header-right">
           <button className="icon-btn sqr-40 menu" onClick={e => setContentClass('header-content open')}/>
           <div className="account">
-            <button>Start free trial</button>
+            <a>Log in</a>
+            <button className="btn-nav">Start free trial</button>
           </div>
         </div>
       </header>
       <main>
-        <div className="section">
+        <div className="section pitch">
           <div className="callout">
             <div className="badge">We’re hiring</div>
             <a>Visit our careers page</a>
@@ -52,7 +52,7 @@ function App() {
             Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui Lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat.
           </p>
         </div>
-        <div className="section">
+        <div className="section start">
           <form className="inline-form" onSubmit={onSubmit}>
             <input type="text" name="email" placeholder="Enter your email" />
             <input type="submit" value="Start free trial" />

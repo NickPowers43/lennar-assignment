@@ -60,6 +60,27 @@ button, input[type=submit] {
   color: #FFFFFF;
   background: #6366F1;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.06);
+
+  &:focus {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.06), 0px 0px 0px 2px #111827, 0px 0px 0px 4px #A5B4FC;
+  }
+
+  &:hover {
+    background: #4F46E5;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.06);
+  }
+
+  &.btn-nav {
+    background: #4B5563;
+
+    &:focus {
+      background: #4B5563;
+    }
+
+    &:hover {
+      background: #374151;
+    }
+  }
 }
 
 button:focus, input[type=submit]:focus {
@@ -67,8 +88,6 @@ button:focus, input[type=submit]:focus {
 }
 
 button:hover, input[type=submit]:hover {
-  background: #4F46E5;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.06);
 }
 
 html, body {
